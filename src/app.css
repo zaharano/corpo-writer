@@ -1,0 +1,31 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+
+  --placeholder-text: rgb(189, 189, 189);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: auto;
+}
+
+h4 {
+  margin-bottom: auto;
+}
+
+h3.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5em;
+}
+
+[contenteditable='true']:empty:not(:focus):before {
+  content: attr(data-placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+  font-style: italic;
+  color: var(--placeholder-text);
+}
